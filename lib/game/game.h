@@ -3,7 +3,7 @@
 #include<Arduino.h>
 class c_game{
     public:
-    void game(int p);
+    void gamel(int p);
     
 };
 #endif

@@ -1,20 +1,20 @@
 #include<PlayerInput.h>
 #include<Pins.h>
-c_Pins idk;
-byte  PS3Input(bool p){                                              //input functions
+c_Pins pin;
+byte c_inputs :: PS3Input(bool p){                                              //input functions
     if(!p){
         return 25;
     }  
-     if (idk.green) {
-     digitalWrite(idk.greenLED, HIGH);
+     if (pin.green) {
+     digitalWrite(pin.greenLED, HIGH);
      return 0;
      } 
-     if (idk.red) {
-        digitalWrite(idk.redLED, HIGH);
+     if (pin.red) {
+        digitalWrite(pin.redLED, HIGH);
         return 1;
      } 
-     if (idk.yellow) {
-     digitalWrite(idk.yellowLED, HIGH);
+     if (pin.yellow) {
+     digitalWrite(pin.yellowLED, HIGH);
      return 2;
      }
         
@@ -24,9 +24,9 @@ byte  PS3Input(bool p){                                              //input fun
     
 
 }
- bool InputTester(byte memory[], int p) {
+ bool c_inputs :: InputTester(byte memory[], int p) {
     byte k;
-    byte LEDs[3]={idk.greenLED,idk.redLED,idk.yellowLED};
+    byte LEDs[3]={pin.greenLED,pin.redLED,pin.yellowLED};
 
     for (int i = 0; i < p; i++) {
         bool pressed = false;

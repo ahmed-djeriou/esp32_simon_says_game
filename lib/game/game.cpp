@@ -1,19 +1,19 @@
 #include<game.h>
 #include<LEDcontrol.h>
 #include<PlayerInput.h>
-c_inputs idk;
-c_LED idc;
-void game(int p){                                   /// the actual game 
+c_inputs button;
+c_LED led;
+void c_game :: gamel(int p){                                   /// the actual game 
   byte states[100];
-  idc.LEDglow_sequence(states,p);
+  led.LEDglow_sequence(states,p);
 
-  if(idk.InputTester(states,p)){
+  if(button.InputTester(states,p)){
     delay(700);
-    idc.LEDglory();
+    led.LEDglory();
     delay(500);
-    game(p+1);
+    gamel(p+1);
 
   }else{
-    idc.LEDlosing();
+    led.LEDlosing();
   }
 }

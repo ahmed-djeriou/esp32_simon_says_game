@@ -10,5 +10,6 @@ public :
  bool green;
  bool red;
  bool yellow;
+ 
 };
 #endif
