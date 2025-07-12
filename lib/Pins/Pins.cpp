@@ -1,8 +1,16 @@
 #include<Pins.h>
- byte redLED = 26 ;
- byte yellowLED = 25;
- byte greenLED =27;
- bool green = Ps3.data.button.cross;
- bool red = Ps3.data.button.circle;
- bool yellow = Ps3.data.button.triangle;
+ c_Pins::c_Pins() {
+    redLED = 26;
+    yellowLED = 25;
+    greenLED = 27;
+    green = false;
+    red = false;
+    yellow = false;
+}
+ 
+ void c_Pins :: update(){
+    green = Ps3.data.button.cross;
+    red = Ps3.data.button.circle;
+    yellow = Ps3.data.button.triangle;
+ }
  

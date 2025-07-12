@@ -18,6 +18,7 @@ void setup()
 
 void loop()
 {
+   
   
     if(Ps3.data.button.square){
       smt.gamel(1);  

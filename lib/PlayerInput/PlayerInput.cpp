@@ -2,6 +2,7 @@
 #include<Pins.h>
 c_Pins pin;
 byte c_inputs :: PS3Input(bool p){                                              //input functions
+    pin.update();
     if(!p){
         return 25;
     }  

@@ -10,6 +10,8 @@ public :
  bool green;
  bool red;
  bool yellow;
- 
+ c_Pins();
+ void update();
+
 };
 #endif
